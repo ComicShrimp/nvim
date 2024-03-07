@@ -22,6 +22,9 @@ return {
 				lsp_zero.default_keymaps({buffer = bufnr})
 			end)
 
+            -- Needed to declare before lsp configuration
+            lsp_zero.extend_lspconfig()
+
 			-- to learn how to use mason.nvim with lsp-zero
 			-- read this: https://github.com/VonHeikemen/lsp-zero.nvim/blob/v3.x/doc/md/guide/integrate-with-mason-nvim.md
 			require('mason').setup({})
