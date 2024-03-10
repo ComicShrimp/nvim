@@ -34,18 +34,28 @@ return {
 			require('mason').setup({})
 			require('mason-lspconfig').setup({
 				ensure_installed = {
-
-					"tsserver",
+                    -- Javascript/Typescript
 					"eslint",
+					"tsserver",
+                    -- "prettier", disabled because it dont have an entry in mason-lspconfig.nvim. Must be installed manually
+
+                    -- Rust
 					"rust_analyzer",
+                    -- Lua
 					"lua_ls",
+                    -- "luacheck", disabled because it dont have an entry in mason-lspconfig.nvim. Must be installed manually
+                    -- Python
+                    -- "ruff", disabled because it dont have an entry in mason-lspconfig.nvim. Must be installed manually
 					"ruff_lsp",
+                    -- Docker
 					"dockerls",
 					"docker_compose_language_service",
-					"jsonls",
-					"marksman",
+                    -- Tailwind
 					"tailwindcss",
-					"volar",
+                    -- Vue
+					"vuels",
+                    -- Others
+                    "jsonls",
 				},
 				handlers = {
 					lsp_zero.default_setup,
